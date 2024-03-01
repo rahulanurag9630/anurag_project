@@ -10,7 +10,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <title>Document</title>
+    <title>Eartheclipsed</title>
     <style>
         .f {
             font-family: 'Pano', sans-serif;
@@ -153,28 +153,37 @@
         }
 
         .contents {
-    position: absolute;
-    margin-top: 10vw; /* Adjust the margin as a percentage of the viewport width */
-    width: 80%; /* Set a maximum width for the content */
-    max-width: 20vw; /* Adjust the maximum width as needed */
-}
+            position: absolute;
+            margin-top: 10vw;
+            /* Adjust the margin as a percentage of the viewport width */
+            width: 80%;
+            /* Set a maximum width for the content */
+            max-width: 20vw;
+            /* Adjust the maximum width as needed */
+        }
 
-.contents p {
-    margin-bottom: 1em; /* Add spacing between paragraphs */
-}
+        .contents p {
+            margin-bottom: 1em;
+            /* Add spacing between paragraphs */
+        }
 
-.contents img {
-    width: 100%; /* Make the image responsive by setting its width to 100% */
-    height: auto; /* Maintain the aspect ratio */
-}
+        .contents img {
+            width: 100%;
+            /* Make the image responsive by setting its width to 100% */
+            height: auto;
+            /* Maintain the aspect ratio */
+        }
 
-@media (max-width: 600px) {
-    /* Apply specific styles for smaller screens if needed */
-    .contents {
-        width: 90%; /* Adjust width for smaller screens */
-        max-width: 100%; /* Allow content to take up full width on smaller screens */
-    }
-}
+        @media (max-width: 600px) {
+
+            /* Apply specific styles for smaller screens if needed */
+            .contents {
+                width: 90%;
+                /* Adjust width for smaller screens */
+                max-width: 100%;
+                /* Allow content to take up full width on smaller screens */
+            }
+        }
 
 
 
@@ -185,6 +194,47 @@
             border-bottom: .5px solid white;
             /* White horizontal line */
         }
+
+        .container.imgs.row .images {
+            transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .container.imgs.row .images:hover {
+            filter: brightness(1);
+            transform: scale(1.1);
+            /* Adjust the scale factor as needed */
+        }
+
+        .container.imgs.row .images:not(:hover) {
+            filter: brightness(0.5);
+            /* Adjust the brightness level as needed */
+        }
+        .honor-title img{
+            transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .honor-title img:hover{
+            filter: brightness(1);
+            transform: scale(1.1);
+        }
+
+        .container.imgs.row .images img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container.imgs.row .images button {
+            background-color: #f8f9fa;
+            /* Default button color */
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .container.imgs.row .images:hover button {
+            background-color: #28a745;
+            /* Change button color on hover */
+        }
+
+
+
 
         .right {
             width: 85% !important;
@@ -386,6 +436,13 @@
             text-align: center;
             margin-bottom: 10px;
         }
+        .crew-photo>div{
+            transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .crew-photo>div:hover{
+            filter: brightness(1);
+            transform: scale(1.1);
+        }
 
         .crew-photo img {
             width: 100%;
@@ -525,28 +582,29 @@
         </div>
 
     </div>
-    <div class="horizontal-line container"></div>
+
     <div class="right">
+        <div class="horizontal-line"></div>
         <div class="container imgs row">
             <div class="images col-sm-6 col-md-3">
                 <img src="img/menu-store-2x.190aab7c.png" alt="">
                 <br>
-                <button type="button" class="btn btn-light" style="border-radius: 30px; width: 10vw;">Episods</button>
+                <button type="button" class="btn " style="border-radius: 30px; width: 10vw;">Episods</button>
             </div>
             <div class="images col-sm-6 col-md-3">
                 <img src="img/menu-extras-2x.cf054b34.png" alt="">
                 <br>
-                <button type="button" class="btn btn-light" style="border-radius: 30px; width: 10vw;">Extras</button>
+                <button type="button" class="btn" style="border-radius: 30px; width: 10vw;">Extras</button>
             </div>
             <div class="images col-sm-6 col-md-3">
                 <img src="img/menu-episodes-2x.b291f0f3.png" alt="">
                 <br>
-                <button type="button" class="btn btn-light" style="border-radius: 30px; width: 10vw;">Store</button>
+                <button type="button" class="btn " style="border-radius: 30px; width: 10vw;">Store</button>
             </div>
             <div class="images col-sm-6 col-md-3">
                 <img src="img/menu-apollo-2x.baac806f.png" alt="">
                 <br>
-                <button type="button" class="btn btn-light" style="border-radius: 30px; width: 10vw;">Listen on
+                <button type="button" class="btn " style="border-radius: 30px; width: 10vw;">Listen on
                     apollo</button>
             </div>
         </div>
