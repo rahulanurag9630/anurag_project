@@ -80,7 +80,7 @@
 
         .circle {
             height: 80vh;
-            width: 40vw;
+            width: 47vw;
             overflow: hidden;
             position: relative;
             border-radius: 50%;
@@ -127,7 +127,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 4vw;
+            font-size: 6em;
             /* Adjust the font size as a percentage of the viewport width */
             color: #fff;
             font-weight: bold;
@@ -136,7 +136,9 @@
 
         .play-button {
             position: absolute;
-            top: 70%;
+            height: auto;
+            width: auto;
+            top: 61%;
             left: 50%;
             transform: translate(-50%, -50%);
             /* Adjust padding as a percentage of the viewport width */
@@ -159,7 +161,7 @@
         /* Responsive styles */
         @media (max-width: 600px) {
             button {
-                width: 100%;
+                width: auto;
                 /* Make buttons take up full width on smaller screens */
                 margin-bottom: 10px;
                 /* Add spacing between buttons on smaller screens */
@@ -193,7 +195,7 @@
             /* Maintain the aspect ratio */
         }
 
-        
+
 
 
 
@@ -357,10 +359,11 @@
                 /* Full width on smaller screens */
             }
         }
+
         @media screen and (max-width: 480px) {
-           .right{
-            width: 100%;
-           }
+            .right {
+                width: 100%;
+            }
         }
 
         .awwords {
