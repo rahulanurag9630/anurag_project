@@ -146,21 +146,25 @@
 
 
         button {
-    display: inline-block;
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 16px; /* Adjust font size as needed */
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-}
+            display: inline-block;
+            padding: 10px 20px;
+            /* Adjust padding as needed */
+            font-size: 16px;
+            /* Adjust font size as needed */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-    button {
-        width: 100%; /* Make buttons take up full width on smaller screens */
-        margin-bottom: 10px; /* Add spacing between buttons on smaller screens */
-    }
-}
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            button {
+                width: 100%;
+                /* Make buttons take up full width on smaller screens */
+                margin-bottom: 10px;
+                /* Add spacing between buttons on smaller screens */
+            }
+        }
 
         P {
             font-family: 'Autoscape', monospace;
@@ -189,16 +193,7 @@
             /* Maintain the aspect ratio */
         }
 
-        @media (max-width: 600px) {
-
-            /* Apply specific styles for smaller screens if needed */
-            .contents {
-                width: 90%;
-                /* Adjust width for smaller screens */
-                max-width: 100%;
-                /* Allow content to take up full width on smaller screens */
-            }
-        }
+        
 
 
 
@@ -224,10 +219,12 @@
             filter: brightness(0.5);
             /* Adjust the brightness level as needed */
         }
-        .honor-title img{
+
+        .honor-title img {
             transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
-        .honor-title img:hover{
+
+        .honor-title img:hover {
             filter: brightness(1);
             transform: scale(1.1);
         }
@@ -360,6 +357,11 @@
                 /* Full width on smaller screens */
             }
         }
+        @media screen and (max-width: 480px) {
+           .right{
+            width: 100%;
+           }
+        }
 
         .awwords {
             height: 100%;
@@ -451,10 +453,12 @@
             text-align: center;
             margin-bottom: 10px;
         }
-        .crew-photo>div{
+
+        .crew-photo>div {
             transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
-        .crew-photo>div:hover{
+
+        .crew-photo>div:hover {
             filter: brightness(1);
             transform: scale(1.1);
         }
@@ -604,22 +608,22 @@
             <div class="images col-sm-6 col-md-3">
                 <img src="img/menu-store-2x.190aab7c.png" alt="">
                 <br>
-                <button type="button" class="btn " style="border-radius: 30px; width: 10vw;">Episods</button>
+                <button type="button" class="btn " style="border-radius: 30px; width: auto;">Episods</button>
             </div>
             <div class="images col-sm-6 col-md-3">
                 <img src="img/menu-extras-2x.cf054b34.png" alt="">
                 <br>
-                <button type="button" class="btn" style="border-radius: 30px; width: 10vw;">Extras</button>
+                <button type="button" class="btn" style="border-radius: 30px; width: auto;">Extras</button>
             </div>
             <div class="images col-sm-6 col-md-3">
                 <img src="img/menu-episodes-2x.b291f0f3.png" alt="">
                 <br>
-                <button type="button" class="btn " style="border-radius: 30px; width: 10vw;">Store</button>
+                <button type="button" class="btn " style="border-radius: 30px; width: auto;">Store</button>
             </div>
             <div class="images col-sm-6 col-md-3">
                 <img src="img/menu-apollo-2x.baac806f.png" alt="">
                 <br>
-                <button type="button" class="btn " style="border-radius: 30px; width: 10vw;">Listen on
+                <button type="button" class="btn " style="border-radius: 30px; width: auto;">Listen on
                     apollo</button>
             </div>
         </div>
@@ -1069,7 +1073,9 @@ Victor Lee</pre>
         </section>
         <div class="horizontal-line "></div> <br><br>
 
-        <span style=""><b>About Us</b>&nbsp; &nbsp; /&nbsp; &nbsp; Press &nbsp; &nbsp;/ &nbsp; &nbsp;FAQs&nbsp; &nbsp;
+        <span><b>About Us</b>&nbsp;
+            &nbsp; /&nbsp; &nbsp; Press &nbsp; &nbsp;/ &nbsp;
+            &nbsp;FAQs&nbsp; &nbsp;
             /&nbsp; &nbsp; Contact</span>
         <br><br>
         <div class="horizontal-line "></div>
