@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="https://www.eartheclipsed.com/favicon.svg" type="image/x-icon">
 
     <title>Eartheclipsed</title>
     <style>
@@ -127,11 +128,25 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 5em;
+            font-size: 7.5rem;
             /* Adjust the font size as a percentage of the viewport width */
             color: #fff;
             font-weight: bold;
             text-align: center;
+
+        }
+
+        @media (max-width: 768px) {
+            .play-text {
+                font-size: 4em;
+            }
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 480px) {
+            .play-text {
+                font-size: 3em;
+            }
         }
 
         .play-button {
@@ -143,9 +158,14 @@
             transform: translate(-50%, -50%);
             /* Adjust padding as a percentage of the viewport width */
             border-radius: 10%;
+            background-color: white;
             cursor: pointer;
         }
 
+        .play-button:hover {
+            background-color: rgb(17, 248, 5);
+            color: white;
+        }
 
         button {
             display: inline-block;
@@ -166,7 +186,18 @@
                 margin-bottom: 10px;
                 /* Add spacing between buttons on smaller screens */
             }
+
+            .play-button {
+                top: 58%;
+                height: auto;
+                font-size: 8px;
+            }
+
+            .honors h1 {
+                font-size: 5em;
+            }
         }
+
 
         P {
             font-family: 'Autoscape', monospace;
@@ -322,6 +353,13 @@
             background-color: rgba(0, 0, 0, 0.527);
         }
 
+        @media (max-width: 2000px) {
+
+            .honors h1 {
+                font-size: 7em;
+            }
+        }
+
         .honor-container {
             height: 100%;
             display: flex;
@@ -350,6 +388,10 @@
             .honor-title {
                 width: 100%;
                 /* Full width on medium screens */
+            }
+
+            .last {
+                width: 400px;
             }
         }
 
@@ -381,44 +423,45 @@
 
 
         /* footer */
+
         .footer1 {
-            color: #fff;
-            margin-top: 5vh;
-            text-align: left;
-            width: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 20px;
-            /* Add padding for better spacing */
-        }
-
-        .footer1 div {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
+            justify-content: space-between;
+            /* Adjust the spacing between elements */
             align-items: center;
-            width: 100%;
-            max-width: 600px;
-            /* Adjust the maximum width as needed */
-            margin: 0 auto;
-            /* Center the content on larger screens */
+            /* Align items vertically in the center */
+            padding: 10px;
+            /* Add padding to provide some spacing */
         }
 
-        .logo1 img {
-            width: 30px;
-            /* Adjust the width as needed */
-            height: auto;
-            margin-right: 5px;
-            vertical-align: middle;
+        .div1 {
+            display: flex;
+            align-items: center;
         }
 
+        .logo1 {
+            margin-right: 20px;
+            /* Adjust the spacing between logo items */
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .div1 img {
+            height: 25px;
+            width: 25px;
+
+        }
+
+        /* Add some spacing to the social logos */
         .social-icons img {
-            width: 30px;
-            height: 30px;
-            margin: 0 5px;
+            margin-right: 10px;
+            margin-left: 10px;
+
         }
+
 
         p {
             text-align: left;
@@ -435,47 +478,44 @@
 
 
         /* crew */
+        .cast1{
+            width: 50%;
+        }
         .cast {
             display: flex;
+            flex-wrap: nowrap;
+            width: 50%;
+
         }
 
-        .crew {
-            flex: 1;
-            /* Add your styling for the crew div */
+        .col {
+            height: 100%;
+            width: 20vw;
         }
 
         .crew-photo {
-            flex: 2;
-            display: grid;
-            gap: 10px;
-            /* Adjust the gap between crew photo divs as needed */
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        }
+            display: flex;
+            gap: 0;
+            width: 83vw;
 
-        .crew-photo>div {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .crew-photo>div {
-            transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-
-        .crew-photo>div:hover {
-            filter: brightness(1);
-            transform: scale(1.1);
         }
 
         .crew-photo img {
-            width: 100%;
+            width: 80%;
             height: auto;
-            object-fit: cover;
             border-radius: 8px;
-            /* Optional: Add border radius for rounded corners */
         }
 
         .image-caption {
-            /* Optional: Add styles for the image caption */
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        .crew-container{
+            width:90%;
         }
     </style>
 </head>
@@ -525,7 +565,7 @@
 
                         <img src="img/pngs/circle.png" alt="">
                         <div class="play-text">PLAY</div>
-                        <div class=" btn  btn-circle play-button" style="background-color: #fff;">
+                        <div class=" btn  btn-circle play-button">
                             MORE
 
                         </div>
@@ -536,7 +576,7 @@
                     <div class="circle">
                         <img src="img/pngs/circle.png" alt="">
                         <div class="play-text">PLAY</div>
-                        <div class=" btn  btn-circle play-button" style="background-color: #fff;">
+                        <div class=" btn  btn-circle play-button">
                             MORE
 
                         </div>
@@ -548,7 +588,7 @@
                     <div class="circle">
                         <img src="img/pngs/circle.png" alt="">
                         <div class="play-text">PLAY</div>
-                        <div class=" btn  btn-circle play-button" style="background-color: #fff;">
+                        <div class=" btn  btn-circle play-button">
                             MORE
 
                         </div>
@@ -559,7 +599,7 @@
                     <div class="circle">
                         <img src="img/pngs/circle.png" alt="">
                         <div class="play-text">PLAY</div>
-                        <div class=" btn  btn-circle play-button" style="background-color: #fff;">
+                        <div class=" btn  btn-circle play-button">
                             MORE
 
                         </div>
@@ -570,7 +610,7 @@
                     <div class="circle">
                         <img src="img/pngs/circle.png" alt="">
                         <div class="play-text">PLAY</div>
-                        <div class=" btn  btn-circle play-button" style="background-color: #fff;">
+                        <div class=" btn  btn-circle play-button">
                             MORE
 
                         </div>
@@ -581,7 +621,7 @@
                     <div class="circle">
                         <img src="img/pngs/circle.png" alt="">
                         <div class="play-text">PLAY</div>
-                        <div class=" btn  btn-circle play-button" style="background-color: #fff;">
+                        <div class=" btn  btn-circle play-button">
                             MORE
 
                         </div>
@@ -592,7 +632,7 @@
                     <div class="circle">
                         <img src="img/pngs/circle.png" alt="">
                         <div class="play-text">PLAY</div>
-                        <div class=" btn  btn-circle play-button" style="background-color: #fff;">
+                        <div class=" btn  btn-circle play-button">
                             MORE
 
                         </div>
@@ -662,7 +702,7 @@
         </div>
         <section class="honors">
             <br><br>
-            <h1 style="text-shadow: -2px 2px 1px rgb(255, 255, 255); color: black; font-size: 7em; margin-top: 5%;">
+            <h1 style="text-shadow: -2px 2px 1px rgb(255, 255, 255); color: black;  margin-top: 5%;">
                 <center>HONORS </center>
             </h1><br><br>
             <div class="honor-container">
@@ -943,47 +983,56 @@ Victor Lee</pre>
 
 
             </div>
-            <div class="crew-photo " id="masonry-container">
-                <div><img src="img/pngs/p-1.jpg" alt="">
-                    <p class="image-caption">Nicholas Prufer</p>
+            <div class="cast1">
+                <div class="crew-photo " style="width: 63vw;" id="masonry-container">
+                    <div class="col">
+                        <div><img src="img/pngs/p-1.jpg" alt="">
+                            <p class="image-caption">Nicholas Prufer</p>
+                        </div>
+                        <div><img src="img/pngs/p-3.jpg" alt="">
+                            <p class="image-caption">AJ Churchill</p>
+                        </div>
+                        <div><img src="img/pngs/p-5.jpg" alt="">
+                            <p class="image-caption">Victor Lee</p>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+                        <div><img src="img/pngs/p-4.jpg" alt="">
+                            <p class="image-caption">Apolloni Alessandro</p>
+                        </div>
+                        <div style="top: 0 !important;"><img src="https://www.eartheclipsed.com/app/uploads/2021/03/8soasiddao.jpg" style="" alt="">
+                            <p class="image-caption">Nick Abcarian</p>
+                        </div>
+                        <div><img src="https://www.eartheclipsed.com/app/uploads/2021/05/mandy-bio-pic.png" alt="">
+                            <p class="image-caption">Mandy Parnell</p>
+                        </div>
+                      
+                    </div>
+                    <div class="col">
+                        <div><img src="https://www.eartheclipsed.com/app/uploads/2021/06/cmincks-400x455.jpg" alt="">
+                            <p class="image-caption">Flavia Menezes</p>
+                        </div>
+                        <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/7eamon-400x530.jpg" alt="">
+                            <p class="image-caption">Andre Felipe</p>
+                        </div>
+                        <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/9nicolas-abcarian-400x494.jpg" alt="">
+                            <p class="image-caption">Jourdain searis</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/12-400x322.jpg" alt="">
+                            <p class="image-caption">Flavia Menezes</p>
+                        </div>
+                        <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/11-400x533.jpg" alt="">
+                            <p class="image-caption">Andre Felipe</p>
+                        </div>
+                        <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/10jourdainsearles2-400x400.jpg" alt="">
+                            <p class="image-caption">Jourdain searis</p>
+                        </div>
+                    </div>
+    
                 </div>
-                <div><img src="img/pngs/p-3.jpg" alt="">
-                    <p class="image-caption">AJ Churchill</p>
-                </div>
-                <div><img src="img/pngs/p-5.jpg" alt="">
-                    <p class="image-caption">Victor Lee</p>
-                </div>
-                <div><img src="img/pngs/p-6.jpg" alt="">
-                    <p class="image-caption">Alexa Polivka</p>
-                </div>
-                <div><img src="img/pngs/p-2.jpg" alt="">
-                    <p class="image-caption">Shane Rutherfoord-Jones</p>
-                </div>
-                <div><img src="img/pngs/p-4.jpg" alt="">
-                    <p class="image-caption">Apolloni Alessandro</p>
-                </div>
-                <div style="top: 0 !important;"><img src="img/pngs/p-5.jpg" style="" alt="">
-                    <p class="image-caption">Nick Abcarian</p>
-                </div>
-                <div><img src="img/pngs/p-1.jpg" alt="">
-                    <p class="image-caption">Mandy Parnell</p>
-                </div>
-                <div><img src="img/pngs/p-6.jpg" alt="">
-                    <p class="image-caption">So Asiddao</p>
-                </div>
-                <div><img src="img/pngs/p-5.jpg" alt="">
-                    <p class="image-caption">Caroline minux</p>
-                </div>
-                <div><img src="img/pngs/p-3.jpg" alt="">
-                    <p class="image-caption">Flavia Menezes</p>
-                </div>
-                <div><img src="img/pngs/p-2.jpg" alt="">
-                    <p class="image-caption">Andre Felipe</p>
-                </div>
-                <div><img src="img/pngs/p-5.jpg" alt="">
-                    <p class="image-caption">Jourdain searis</p>
-                </div>
-
             </div>
         </section><br><br>
         <div class="horizontal-line "></div>
@@ -993,84 +1042,116 @@ Victor Lee</pre>
 
             <div class="crew-photo " id="masonry-container">
 
-                <div><img src="img/pngs/p-1.jpg" alt="">
-                    <p class="image-caption">Nicholas Prufer</p>
+                <div class="col">
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/1allegrarodriguezshivers-400x602.jpg" alt="">
+                        <p class="image-caption">Nicholas Prufer</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/2reginaldwest-400x608.jpg" alt="">
+                        <p class="image-caption">AJ Churchill</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/3christiantchan-400x391.jpg" alt="">
+                        <p class="image-caption">Victor Lee</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/4amylyndon-400x533.jpg" alt="">
+                        <p class="image-caption">Alexa Polivka</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/5michaelmalconian-400x391.jpg" alt="">
+                        <p class="image-caption">Shane Rutherfoord-Jones</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/23talideassis-400x584.jpg" alt="">
+                        <p class="image-caption">Apolloni Alessandro</p>
+                    </div>
                 </div>
-                <div><img src="img/pngs/p-3.jpg" alt="">
-                    <p class="image-caption">AJ Churchill</p>
+                <div class="col">
+                    <div style="top: 0 !important;"><img src="https://www.eartheclipsed.com/app/uploads/2021/03/10flokiscellus-400x515.jpg" style="" alt="">
+                        <p class="image-caption">Nick Abcarian</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/14elisabethashby-400x489.jpg" alt="">
+                        <p class="image-caption">Mandy Parnell</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/22angeliquefrancis-400x584.jpg" alt="">
+                        <p class="image-caption">So Asiddao</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/8cammiemiddleton-400x533.jpg" alt="">
+                        <p class="image-caption">Caroline minux</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/11angiereed-400x492.jpg" alt="">
+                        <p class="image-caption">Flavia Menezes</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/11angiereed-400x492.jpg" alt="">
+                        <p class="image-caption">Andre Felipe</p>
+                    </div>
                 </div>
-                <div><img src="img/pngs/p-5.jpg" alt="">
-                    <p class="image-caption">Victor Lee</p>
+                <div class="col">
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/7danieldauphin-400x483.jpg" alt="">
+                        <p class="image-caption">Jourdain searis</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/6benediktsebastian-400x602.jpg" alt="">
+                        <p class="image-caption">Nicholas Prufer</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/19katoalexander-400x256.jpg" alt="">
+                        <p class="image-caption">AJ Churchill</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/9jaydenlibran-400x458.jpg" alt="">
+                        <p class="image-caption">Victor Lee</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/17joshportillo-400x602.jpg" alt="">
+                        <p class="image-caption">Alexa Polivka</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/15gingersue-400x533.jpg" alt="">
+                        <p class="image-caption">Shane Rutherfoord-Jones</p>
+                    </div>
                 </div>
-                <div><img src="img/pngs/p-6.jpg" alt="">
-                    <p class="image-caption">Alexa Polivka</p>
+                <div class="col">
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/13dianewasnak-400x501.jpg" alt="">
+                        <p class="image-caption">Apolloni Alessandro</p>
+                    </div>
+                    <div style="top: 0 !important;"><img src="https://www.eartheclipsed.com/app/uploads/2021/03/18kadynkuioka-400x320.jpg" style="" alt="">
+                        <p class="image-caption">Nick Abcarian</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/17joshportillo-400x602.jpg" alt="">
+                        <p class="image-caption">Mandy Parnell</p>
+                    </div>
+                    <div><img src="https://www.eartheclipsed.com/app/uploads/2021/03/20mikepollock-400x533.jpg" alt="">
+                        <p class="image-caption">So Asiddao</p>
+                    </div>
+                    <div><img src="img/pngs/p-5.jpg" alt="">
+                        <p class="image-caption">Caroline minux</p>
+                    </div>
+                    <div><img src="img/pngs/p-3.jpg" alt="">
+                        <p class="image-caption">Flavia Menezes</p>
+                    </div>
+                    <div><img src="img/pngs/p-2.jpg" alt="">
+                        <p class="image-caption">Andre Felipe</p>
+                    </div>
+
                 </div>
-                <div><img src="img/pngs/p-2.jpg" alt="">
-                    <p class="image-caption">Shane Rutherfoord-Jones</p>
+                <div class="col">
+                    <div><img src="img/pngs/p-4.jpg" alt="">
+                        <p class="image-caption">Apolloni Alessandro</p>
+                    </div>
+                    <div style="top: 0 !important;"><img src="img/pngs/p-5.jpg" style="" alt="">
+                        <p class="image-caption">Nick Abcarian</p>
+                    </div>
+                    <div><img src="img/pngs/p-1.jpg" alt="">
+                        <p class="image-caption">Mandy Parnell</p>
+                    </div>
+                    <div><img src="img/pngs/p-6.jpg" alt="">
+                        <p class="image-caption">So Asiddao</p>
+                    </div>
+                    <div><img src="img/pngs/p-5.jpg" alt="">
+                        <p class="image-caption">Caroline minux</p>
+                    </div>
+                    <div><img src="img/pngs/p-3.jpg" alt="">
+                        <p class="image-caption">Flavia Menezes</p>
+                    </div>
+                    <div><img src="img/pngs/p-2.jpg" alt="">
+                        <p class="image-caption">Andre Felipe</p>
+                    </div>
+
                 </div>
-                <div><img src="img/pngs/p-4.jpg" alt="">
-                    <p class="image-caption">Apolloni Alessandro</p>
-                </div>
-                <div style="top: 0 !important;"><img src="img/pngs/p-5.jpg" style="" alt="">
-                    <p class="image-caption">Nick Abcarian</p>
-                </div>
-                <div><img src="img/pngs/p-1.jpg" alt="">
-                    <p class="image-caption">Mandy Parnell</p>
-                </div>
-                <div><img src="img/pngs/p-6.jpg" alt="">
-                    <p class="image-caption">So Asiddao</p>
-                </div>
-                <div><img src="img/pngs/p-5.jpg" alt="">
-                    <p class="image-caption">Caroline minux</p>
-                </div>
-                <div><img src="img/pngs/p-3.jpg" alt="">
-                    <p class="image-caption">Flavia Menezes</p>
-                </div>
-                <div><img src="img/pngs/p-2.jpg" alt="">
-                    <p class="image-caption">Andre Felipe</p>
-                </div>
-                <div><img src="img/pngs/p-5.jpg" alt="">
-                    <p class="image-caption">Jourdain searis</p>
-                </div>
-                <div><img src="img/pngs/p-1.jpg" alt="">
-                    <p class="image-caption">Nicholas Prufer</p>
-                </div>
-                <div><img src="img/pngs/p-3.jpg" alt="">
-                    <p class="image-caption">AJ Churchill</p>
-                </div>
-                <div><img src="img/pngs/p-5.jpg" alt="">
-                    <p class="image-caption">Victor Lee</p>
-                </div>
-                <div><img src="img/pngs/p-6.jpg" alt="">
-                    <p class="image-caption">Alexa Polivka</p>
-                </div>
-                <div><img src="img/pngs/p-2.jpg" alt="">
-                    <p class="image-caption">Shane Rutherfoord-Jones</p>
-                </div>
-                <div><img src="img/pngs/p-4.jpg" alt="">
-                    <p class="image-caption">Apolloni Alessandro</p>
-                </div>
-                <div style="top: 0 !important;"><img src="img/pngs/p-5.jpg" style="" alt="">
-                    <p class="image-caption">Nick Abcarian</p>
-                </div>
-                <div><img src="img/pngs/p-1.jpg" alt="">
-                    <p class="image-caption">Mandy Parnell</p>
-                </div>
-                <div><img src="img/pngs/p-6.jpg" alt="">
-                    <p class="image-caption">So Asiddao</p>
-                </div>
-                <div><img src="img/pngs/p-5.jpg" alt="">
-                    <p class="image-caption">Caroline minux</p>
-                </div>
-                <div><img src="img/pngs/p-3.jpg" alt="">
-                    <p class="image-caption">Flavia Menezes</p>
-                </div>
-                <div><img src="img/pngs/p-2.jpg" alt="">
-                    <p class="image-caption">Andre Felipe</p>
-                </div>
-                <div><img src="img/pngs/p-5.jpg" alt="">
-                    <p class="image-caption">Jourdain searis</p>
-                </div>
+
+
 
             </div>
         </section>
@@ -1084,7 +1165,7 @@ Victor Lee</pre>
         <div class="horizontal-line "></div>
 
         <div class="footer1">
-            <div>
+            <div class="div1">
                 <span class="logo1">Subscribe Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <span class="logo1"><img src="img/pngs/spotify.png" alt="Apollo Logo"> Apollo</span>
                 <span class="logo1"><img src="img/pngs/pngwing.com (8).png" alt="Apple Logo"> Apple</span>
@@ -1092,16 +1173,16 @@ Victor Lee</pre>
                 <span class="logo1"><img src="img/pngs/pngwing.com (9).png" alt="Newsletter Logo"> Newsletter</span>
             </div>
 
-            <div class="social-icons">
+            <div class="social-icons div1">
                 <span>Follow Us</span>
-                <img src="img/pngs/pngwing.com (10).png" alt="Social Logo 1">
+                <img src="img/pngs/pngwing.com (10).png" height="20px" width="20px" alt="Social Logo 1">
                 <img src="img/pngs/pngwing.com (11).png" alt="Social Logo 2">
                 <img src="img/pngs/pngwing.com (12).png" alt="Social Logo 3">
             </div><BR></BR>
 
         </div>
         <p>
-        <pre>PRIVACY POLOCIES  /  TERMS & CONDITIONS  /  SHIPING AND RETURNS</pre>
+        <pre class="last">PRIVACY POLOCIES  /  TERMS & CONDITIONS  /  SHIPING AND RETURNS</pre>
         </p>
 
     </div>
