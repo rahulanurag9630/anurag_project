@@ -282,7 +282,7 @@
 
 
         .right {
-            width: 85% ;
+            width: 85%;
             float: right;
             color: white;
 
@@ -365,6 +365,10 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+        }
+
+        .honor-contain p {
+            text-align: center;
         }
 
         .honor-title {
@@ -464,9 +468,9 @@
         }
 
 
-        p {
+        /* p {
             text-align: left;
-        }
+        } */
 
         /* Responsive styles */
         @media screen and (max-width: 768px) {
@@ -495,6 +499,15 @@
             width: 20vw;
         }
 
+        .col>div {
+            margin: 8%;
+        }
+
+        .col>div:hover img {
+            transform: scale(1.1);
+            /* Adjust the scale factor as needed */
+        }
+
         .crew-photo {
             display: flex;
             gap: 0;
@@ -502,10 +515,13 @@
 
         }
 
+
         .crew-photo img {
-            width: 80%;
+            width: 100%;
             height: auto;
             border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+
         }
 
         .image-caption {
@@ -709,13 +725,13 @@
                 <center>HONORS </center>
             </h1><br><br>
             <div class="honor-container">
-                <div class="honor-title"><img src="img/pngs/tf21laureloswhite-1-1600x864.png" height="70%" width="70%"
+                <div class="honor-title"><img src="img/pngs/tf21laureloswhite-1-1600x864.png" height="65%" width="65%"
                         alt="">
                     <h3>Tribeca Festival 2021</h3>
                     <p>OFFICIAL SELECTION – FICTION PODCAST
                     </p>
                 </div>
-                <div class="honor-title"><img src="img/pngs/sitebadges2022-bwwebbynominee.png" height="75%" width="75%"
+                <div class="honor-title"><img src="img/pngs/sitebadges2022-bwwebbynominee.png" height="65%" width="65%"
                         alt="">
                     <h3>NY Festivals Radio Awards 2021</h3>
                     <p>BEST DRAMA PODCAST – GOLD
@@ -735,14 +751,16 @@
                 </div>
                 <div class="honor-title"><img src="img/pngs/officialselection-miamiwebfest-2022-1600x1037.png"
                         height="75%" width="75%" alt="">
-                    <h3>Tribeca Festival 2021</h3>
-                    <p>OFFICIAL SELECTION – FICTION PODCAST
+                    <h3>NY Festivals Radio Awards 2021</h3>
+                    <p>BEST FICTION – NOMINEE
                     </p>
                 </div>
                 <div class="honor-title"><img src="img/pngs/official-selection-like-it-film-fest-2021.png" height="75%"
                         width="75%" alt="">
-                    <h3>Tribeca Festival 2021</h3>
-                    <p>OFFICIAL SELECTION – FICTION PODCAST
+                    <h3>The 11th Lovie Awards </h3>
+                    <p>BEST FICTION PODCAST – GOLD <br>
+                        BEST PODCAST SERIES – GOLD <br>
+                        BEST EPISODE (SOGEN) – GOLD
                     </p>
                 </div>
                 <div class="honor-title"><img
@@ -857,7 +875,7 @@
                 <h4>Awwwards </h4>
             </center>
             <center>
-                <p>HONORABLE MENTION </p>
+                <p style="text-align: center;">HONORABLE MENTION </p>
             </center>
             <img src="img//pngs/map.png" width="100%" alt="">
         </section>
